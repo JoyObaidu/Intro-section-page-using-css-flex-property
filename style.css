@@ -1,0 +1,349 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  hsl(0, 0%, 100%);
+    padding: 30px 40px;
+    height: 100vh;
+    font-size: 15px;
+    font-family: 'Epilogue', sans-serif;
+}
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    font-size: 13px;
+}
+.nav-open, .nav-close{
+    display: none;
+}
+.navbar .nav-item{
+    display: inline-flex;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+  }
+.navbar .nav-links{
+    margin-left: 70px;
+}
+.dropdown{
+    display: flex;
+    flex-direction: column;
+}
+.dropbtn{
+    background: none;
+    border: none;
+    outline: none;
+    color: hsl(0, 0%, 41%);
+}
+form{
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    display: flex;
+    gap: 20px;
+}
+.btn{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.register{
+    border: 1px solid hsl(0, 0%, 8%);
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+}
+.dropdown-content{
+    display: none;
+    flex-direction: column;
+    margin: 10px;
+    padding: 15px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 2px 2px hsl(0, 6%, 97%);
+    border-radius: 10px;
+    font-size: 13px;
+ }
+.dropdown-content img{
+    float: left;
+    padding: 0 5px 5px 0;
+}
+.dropdown-content a, .nav-item a{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+
+/* hover states */
+.dropbtn:hover, .nav-item a:hover{
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+    font-weight: 500;
+}
+.dropdown-content.show{
+    display: flex;
+}
+.main-content{
+    display: flex;
+    flex-direction: row;
+    column-gap: .5rem;
+    width: 100%;
+    padding: 50px 90px;
+    height: 500px;
+}
+.main-content .content{
+    flex: 50%;
+}
+.content h1{
+    font-size: 50px;
+    font-weight: 800;
+}
+.content p{
+    padding: 40px 0;
+    width: 300px;
+}
+.content .btn{
+    background: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    margin: 30px 0 50px;
+}
+.content .images img{
+    width: 100px;
+    padding: 0 10px;
+}
+.content .btn:hover{
+    background: none;
+    color: hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 8%);
+}
+.main-content .hero{
+    flex: 50%;
+    background-image: url("./images/image-hero-desktop.png");
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+/* media queries*/
+@media screen and (max-width: 900px){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-open{
+        display: block;
+    }
+    .nav-close{
+        display: block;
+        position: fixed;
+        top: 5%;
+        right: 5%;
+    }
+    .nav-menu{
+        display: none;
+        background-color: hsl(0, 0%, 98%);
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    .navbar .nav-item{
+        display: block;
+        text-decoration: none;
+        padding-top: 50px;
+      }
+    .navbar .nav-links{
+        position: relative;
+        right: 30%;
+        display: flex;
+       flex-direction: column;
+    }
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+    }
+    .dropbtn{
+        background: none;
+        border: none;
+        outline: none;
+        color: hsl(0, 0%, 41%);
+    }
+    .dropdown-content{
+        display: none;
+        flex-direction: column;
+        width: 130px;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 2px 2px hsl(0, 6%, 97%);
+        border-radius: 10px;
+        font-size: 13px;
+     }
+    .dropdown-content img{
+        float: left;
+        padding: 0 5px 5px 0;
+    }
+    .dropdown-content a, .nav-item a{
+        text-decoration: none;
+        color: hsl(0, 0%, 41%);
+    }
+    
+    /* hover states */
+    .dropbtn:hover, .nav-item a:hover{
+        color: hsl(0, 0%, 8%);
+        cursor: pointer;
+        font-weight: 500;
+    }
+    .show{
+        display: flex;
+    }
+    form{
+       position: absolute;
+       top: 80%;
+       right: 30%;
+       flex-direction: column;
+    }
+    .btn{
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+    }
+    .register{
+        border: 1px solid hsl(0, 0%, 8%);
+        padding: 10px;
+        width: 100px;
+        border-radius: 10px;
+    }
+    .dropdown-content{
+        position: relative;
+        left: 50%;
+        display: none;
+        flex-direction: column;
+        margin: 10px;
+        padding: 20px;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 2px 2px hsl(0, 6%, 97%);
+        border-radius: 10px;
+        font-size: 13px;
+     }
+    .dropdown-content img{
+        float: left;
+        padding: 0 5px 5px 0;
+    }
+    .dropdown-content a, .nav-item a{
+        text-decoration: none;
+        color: hsl(0, 0%, 41%);
+    }
+    
+    /* hover states */
+    .dropbtn:hover, .nav-item a:hover{
+        color: hsl(0, 0%, 8%);
+        cursor: pointer;
+        font-weight: 500;
+    }
+    
+    .main-content{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 30px 20px;
+        height: 100vh;
+        text-align: center;
+    }
+.content{
+    margin-top: 20px;
+}
+    .content h1{
+        font-size: 30px;
+        font-weight: 800;
+    }
+    .content p{
+        padding: 20px 0;
+        width: 100%;
+    }
+    .content .btn{
+        margin: 30px 0 30px;
+    }
+    .content .images img{
+        width: 60px;
+        padding: 0 10px;
+    }
+    .main-content .hero{
+        height: 400px;
+        background-image: url("./images/image-hero-mobile.png");
+        background-size: 100% 100%;
+        background-position: center center;
+    }
+}
+@media screen and (max-width: 499px){
+    body{
+        padding: 20px;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-close{
+        display: block;
+        position: fixed;
+        top: 5%;
+        right: 5%;
+    }
+    .nav-menu{
+        display: none;
+        background-color: hsl(0, 0%, 98%);
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    .navbar .nav-item{
+        display: inline-block;
+        text-decoration: none;
+        padding-top: 20px;
+      }
+    .navbar .nav-links{
+        position: fixed;
+        right: 30%;
+        display: flex;
+       flex-direction: column;
+    }
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+    }
+    .dropbtn{
+        background: none;
+        border: none;
+        outline: none;
+        color: hsl(0, 0%, 41%);
+    }
+    form{
+       position: relative;
+       top: 70%;
+       right: 20%;
+       flex-direction: column;
+    }
+    .register{
+        width: 150px;
+    }
+}
+.attribution { font-size: 11px; text-align: center; position: fixed; bottom: 0;}
+.attribution a { color: hsl(228, 45%, 44%); }
+

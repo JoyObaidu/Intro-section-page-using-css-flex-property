@@ -68,6 +68,9 @@ form{
     border-radius: 10px;
     font-size: 13px;
  }
+ .dropdown:hover .dropdown-content{
+    display: flex;
+ } 
 .dropdown-content img{
     float: left;
     padding: 0 5px 5px 0;

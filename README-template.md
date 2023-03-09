@@ -26,6 +26,8 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
+image.png
+image.png
 
 ### Links
 
@@ -38,9 +40,6 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 -Vanilla Js
-
-### What I learned
-
 
 ### Continued development
 Margins and paddings 

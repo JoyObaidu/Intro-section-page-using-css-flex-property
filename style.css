@@ -207,6 +207,10 @@ form{
     .show{
         display: flex;
     }
+    .dropdown:hover .dropdown-content{
+    position: fixed;
+    right: 30%;
+    }
     form{
        position: absolute;
        top: 80%;
